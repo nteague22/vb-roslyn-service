@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "VbRoslynService";
+
+package test;
+
+service Tester {
+    rpc HealthTest (TestRequest) returns (TestResponse);
+}
+
+message TestRequest {
+    string name = 1;
+    string namespace = 2;
+}
+
+message TestResponse {
+    string details = 1;
+}
